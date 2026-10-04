@@ -1,167 +1,1188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="f1G4mQCkzCxej6eVDmHQVfcONZFIR24VO8dWJv9si9k" />
 
-    <title>Saurabh Shukla | Android Developer & Cybersecurity</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap 5.3.8 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description"
+          content="Saurabh Shukla - Cybersecurity Enthusiast, Android Developer and Linux Security Learner. Portfolio showcasing cybersecurity, Android and web projects.">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta name="keywords"
+          content="Saurabh Shukla, Cybersecurity, Android Developer, Kotlin, Kali Linux, Nmap, Burp Suite, Linux, CyberPath, Security">
+
+    <meta name="author"
+          content="Saurabh Shukla">
+
+    <title>Saurabh Shukla | Cybersecurity & Android Developer</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP 5.3.8
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
 
     <style>
+
+        :root {
+
+            --bg-dark: #07111f;
+            --bg-card: #0d1b2a;
+            --bg-card-light: #10243a;
+
+            --primary: #35cfff;
+            --primary-dark: #1598c4;
+
+            --text-white: #ffffff;
+            --text-gray: #aebbc9;
+
+            --border: rgba(53, 207, 255, 0.18);
+
+        }
+
+
+        /* ================= GENERAL ================= */
+
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
+
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
+
+            font-family: 'Inter', sans-serif;
+
+            background: var(--bg-dark);
+
+            color: var(--text-white);
+
+            line-height: 1.7;
+
         }
 
-        .navbar {
-            background-color: #0d1b2a;
+
+        a {
+            text-decoration: none;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: #35cfff !important;
+
+        section {
+            padding: 100px 0;
         }
 
-        .nav-link {
-            color: #ffffff !important;
-        }
-
-        .nav-link:hover {
-            color: #35cfff !important;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #08142a, #15233d);
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-
-        .hero h1 span {
-            color: #35cfff;
-        }
-
-        .hero p {
-            color: #bfc6d8;
-            font-size: 1.15rem;
-        }
-
-        .btn-primary {
-            background-color: #35cfff;
-            border-color: #35cfff;
-            color: #08142a;
-            font-weight: 600;
-        }
-
-        .btn-primary:hover {
-            background-color: #20b9e8;
-            border-color: #20b9e8;
-            color: #08142a;
-        }
 
         .section-title {
-            font-weight: 700;
-            margin-bottom: 40px;
+
+            font-size: 2.4rem;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+
         }
+
 
         .section-title span {
-            color: #0d9dcc;
+            color: var(--primary);
         }
 
-        .skill-card,
-        .project-card {
-            border: none;
-            border-radius: 15px;
+
+        .section-subtitle {
+
+            color: var(--text-gray);
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+        }
+
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+
+            background: rgba(7, 17, 31, 0.92);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .navbar-brand {
+
+            font-size: 1.5rem;
+
+            font-weight: 800;
+
+            color: var(--primary) !important;
+
+        }
+
+
+        .navbar-brand span {
+            color: white;
+        }
+
+
+        .nav-link {
+
+            color: #dbe7f2 !important;
+
+            margin-left: 15px;
+
             transition: 0.3s;
-            height: 100%;
+
         }
 
-        .skill-card:hover,
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+        .nav-link:hover {
+
+            color: var(--primary) !important;
+
         }
+
+
+        .navbar-toggler {
+
+            border: 1px solid var(--primary);
+
+        }
+
+
+        .navbar-toggler-icon {
+
+            filter: invert(1);
+
+        }
+
+
+
+        /* ================= HERO ================= */
+
+        #home {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(53, 207, 255, 0.13),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(21, 152, 196, 0.10),
+                    transparent 30%
+                );
+
+        }
+
+
+        .hero-small {
+
+            color: var(--primary);
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .hero-title {
+
+            font-size: clamp(2.6rem, 6vw, 5rem);
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+        }
+
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+
+        .hero-description {
+
+            color: var(--text-gray);
+
+            font-size: 1.15rem;
+
+            max-width: 650px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+
+        .btn-primary-custom {
+
+            background: var(--primary);
+
+            border: none;
+
+            color: #06111c;
+
+            font-weight: 700;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn-primary-custom:hover {
+
+            background: #69dbff;
+
+            color: #06111c;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .btn-outline-custom {
+
+            border: 1px solid var(--primary);
+
+            color: var(--primary);
+
+            font-weight: 600;
+
+            padding: 11px 25px;
+
+            border-radius: 8px;
+
+            margin-left: 10px;
+
+        }
+
+
+        .btn-outline-custom:hover {
+
+            background: var(--primary);
+
+            color: #06111c;
+
+        }
+
+
+        /* ================= PROFILE PHOTO ================= */
+
+        .profile-container {
+
+            width: 330px;
+
+            height: 330px;
+
+            margin: auto;
+
+            position: relative;
+
+        }
+
+
+        .profile-container::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -15px;
+
+            border: 2px solid var(--primary);
+
+            border-radius: 50%;
+
+            opacity: 0.25;
+
+        }
+
+
+        .profile-image {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid var(--primary);
+
+            box-shadow:
+
+                0 0 30px rgba(53, 207, 255, 0.25);
+
+        }
+
+
+        .profile-placeholder {
+
+            width: 100%;
+
+            height: 100%;
+
+            border-radius: 50%;
+
+            border: 5px solid var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--bg-card);
+
+            font-size: 100px;
+
+            color: var(--primary);
+
+        }
+
+
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            background: #081522;
+        }
+
+
+        .about-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+        }
+
+
+        .about-card p {
+
+            color: var(--text-gray);
+
+        }
+
+
+        .focus-box {
+
+            background: var(--bg-card-light);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .focus-box i {
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-right: 10px;
+
+        }
+
+
+
+        /* ================= SKILLS ================= */
+
+        .skill-card {
+
+            height: 100%;
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color: var(--primary);
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.25);
+
+        }
+
 
         .skill-icon {
-            font-size: 35px;
-            color: #0d9dcc;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 15px;
+
         }
 
-        .badge-custom {
-            background-color: #e7f8fd;
-            color: #087da5;
-            padding: 8px 12px;
-            margin: 4px;
-            display: inline-block;
-            border-radius: 20px;
-        }
 
-        .project-card .card-title {
+        .skill-card h4 {
+
             font-weight: 700;
+
+            margin-bottom: 15px;
+
         }
 
-        .contact-section {
-            background-color: #08142a;
+
+        .skill-card p {
+
+            color: var(--text-gray);
+
+        }
+
+
+        .skill-tag {
+
+            display: inline-block;
+
+            background: rgba(53, 207, 255, 0.08);
+
+            border: 1px solid var(--border);
+
+            color: #d9f7ff;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            margin: 4px 3px;
+
+            font-size: 0.85rem;
+
+        }
+
+
+
+        /* ================= PROJECTS ================= */
+
+        #projects {
+            background: #081522;
+        }
+
+
+        .project-card {
+
+            height: 100%;
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+
+        }
+
+
+        .project-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: var(--primary);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+        .project-header {
+
+            height: 150px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0d263a,
+                    #0a1726
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .project-header i {
+
+            font-size: 65px;
+
+            color: var(--primary);
+
+        }
+
+
+        .project-body {
+
+            padding: 28px;
+
+        }
+
+
+        .project-body h4 {
+
+            font-weight: 700;
+
+        }
+
+
+        .project-body p {
+
+            color: var(--text-gray);
+
+        }
+
+
+        .project-tech {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .github-btn {
+
+            border: 1px solid var(--primary);
+
+            color: var(--primary);
+
+            padding: 9px 18px;
+
+            border-radius: 7px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .github-btn:hover {
+
+            background: var(--primary);
+
+            color: #06111c;
+
+        }
+
+
+
+        /* ================= CAREER ================= */
+
+        .career-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 40px;
+
+        }
+
+
+        .career-item {
+
+            padding: 20px;
+
+            border-left: 3px solid var(--primary);
+
+            background: rgba(53, 207, 255, 0.03);
+
+            margin-bottom: 15px;
+
+            border-radius: 0 10px 10px 0;
+
+        }
+
+
+        .career-item h5 {
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+        }
+
+
+        .career-item p {
+
+            color: var(--text-gray);
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* ================= EDUCATION ================= */
+
+        .timeline {
+
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 20px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--primary);
+
+            opacity: 0.3;
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-left: 60px;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 10px;
+
+            top: 5px;
+
+            width: 22px;
+
+            height: 22px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            box-shadow: 0 0 15px rgba(53, 207, 255, 0.5);
+
+        }
+
+
+        .timeline-content {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+        }
+
+
+        .timeline-content h4 {
+
+            font-weight: 700;
+
+        }
+
+
+        .timeline-content p {
+
+            color: var(--text-gray);
+
+            margin-bottom: 5px;
+
+        }
+
+
+
+        /* ================= CERTIFICATIONS ================= */
+
+        #certifications {
+            background: #081522;
+        }
+
+
+        .cert-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            height: 100%;
+
+        }
+
+
+        .cert-card i {
+
+            font-size: 35px;
+
+            color: var(--primary);
+
+        }
+
+
+        .cert-card h5 {
+
+            margin-top: 15px;
+
+            font-weight: 700;
+
+        }
+
+
+        .cert-card p {
+
+            color: var(--text-gray);
+
+        }
+
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 45px;
+
+            text-align: center;
+
+        }
+
+
+        .experience-icon {
+
+            font-size: 60px;
+
+            color: var(--primary);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .experience-card p {
+
+            color: var(--text-gray);
+
+        }
+
+
+
+        /* ================= RESUME ================= */
+
+        .resume-box {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0c2133,
+                    #091827
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 50px;
+
+            text-align: center;
+
+        }
+
+
+        .resume-box i {
+
+            font-size: 55px;
+
+            color: var(--primary);
+
+        }
+
+
+        .resume-box p {
+
+            color: var(--text-gray);
+
+            max-width: 600px;
+
+            margin: 15px auto 25px;
+
+        }
+
+
+
+        /* ================= CONTACT ================= */
+
+        #contact {
+            background: #081522;
+        }
+
+
+        .contact-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 30px;
+
+            height: 100%;
+
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .contact-item i {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: rgba(53, 207, 255, 0.08);
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+        }
+
+
+        .contact-item small {
+
+            color: #7f91a3;
+
+            display: block;
+
+        }
+
+
+        .contact-item a,
+        .contact-item span {
+
             color: white;
+
         }
 
-        .contact-section p {
-            color: #bfc6d8;
+
+        .form-control {
+
+            background: #081522;
+
+            border: 1px solid var(--border);
+
+            color: white;
+
+            padding: 12px;
+
         }
+
+
+        .form-control:focus {
+
+            background: #081522;
+
+            color: white;
+
+            border-color: var(--primary);
+
+            box-shadow: 0 0 0 0.2rem rgba(53, 207, 255, 0.10);
+
+        }
+
+
+        .form-control::placeholder {
+
+            color: #708294;
+
+        }
+
+
+
+        /* ================= FOOTER ================= */
 
         footer {
-            background-color: #050d19;
-            color: #bfc6d8;
+
+            background: #040b13;
+
+            border-top: 1px solid var(--border);
+
+            padding: 30px 0;
+
         }
 
-        .social-icon {
-            font-size: 25px;
+
+        .social-link {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
             color: white;
-            margin-right: 15px;
+
+            margin: 0 5px;
+
             transition: 0.3s;
+
         }
 
-        .social-icon:hover {
-            color: #35cfff;
+
+        .social-link:hover {
+
+            background: var(--primary);
+
+            color: #06111c;
+
         }
+
+
+        .footer-text {
+
+            color: #708294;
+
+        }
+
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 991px) {
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .profile-container {
+
+                width: 270px;
+
+                height: 270px;
+
+                margin-top: 60px;
+
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .btn-outline-custom {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .profile-container {
+
+                width: 220px;
+
+                height: 220px;
+
+            }
+
+            .about-card,
+            .career-card,
+            .resume-box {
+                padding: 25px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
-<nav class="navbar navbar-expand-lg sticky-top">
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
     <div class="container">
 
-        <a class="navbar-brand" href="#">
-            Saurabh.
+        <a class="navbar-brand" href="#home">
+            Saurabh<span>.</span>
         </a>
 
-        <button class="navbar-toggler bg-light"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
             <span class="navbar-toggler-icon"></span>
+
         </button>
+
 
         <div class="collapse navbar-collapse" id="navbarNav">
 
@@ -184,7 +1205,17 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="#career">Career Focus</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">
+                        Certifications
+                    </a>
                 </li>
 
                 <li class="nav-item">
@@ -194,13 +1225,18 @@
             </ul>
 
         </div>
+
     </div>
+
 </nav>
 
 
-<!-- ================= HERO ================= -->
 
-<section id="home" class="hero">
+<!-- =====================================================
+     HOME
+====================================================== -->
+
+<section id="home">
 
     <div class="container">
 
@@ -208,46 +1244,144 @@
 
             <div class="col-lg-7">
 
-                <p class="mb-2">Hello, I'm</p>
+                <div class="hero-small">
+                    Hello, I'm
+                </div>
 
-                <h1>
-                    Saurabh <span>Shukla</span>
+
+                <h1 class="hero-title">
+
+                    Saurabh
+                    <span>Shukla</span>
+
                 </h1>
 
-                <h3 class="mb-3">
-                    Android Developer & Cybersecurity Enthusiast
+
+                <h3 class="mt-3">
+
+                    Cybersecurity Enthusiast
+                    <span class="text-secondary">|</span>
+                    Android Developer
+
                 </h3>
 
-                <p>
-                    MCA student passionate about building Android applications,
-                    cybersecurity solutions, and secure digital experiences.
+
+                <p class="hero-description">
+
+                    MCA Cybersecurity student interested in cybersecurity,
+                    Linux, security operations, vulnerability analysis,
+                    ethical hacking and secure application development.
+                    I also have hands-on experience building Android
+                    applications using Kotlin and Firebase.
+
                 </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary-custom">
+
+                        <i class="bi bi-code-slash"></i>
+
+                        View Projects
+
+                    </a>
+
+
+                    <a
+                        href="resume.pdf"
+                        download
+                        class="btn btn-outline-custom">
+
+                        <i class="bi bi-download"></i>
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
 
                 <div class="mt-4">
 
-                    <a href="#projects"
-                       class="btn btn-primary me-2">
-                        View Projects
+                    <a
+                        href="https://github.com/saurabhshuklass"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link">
+
+                        <i class="bi bi-github"></i>
+
                     </a>
 
-                    <a href="#contact"
-                       class="btn btn-outline-light">
-                        Contact Me
+
+                    <a
+                        href="https://www.linkedin.com/in/saurabh-shukla-931683388/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+
+                    <a
+                        href="mailto:work.saurabhshuklass@gmail.com"
+                        class="social-link">
+
+                        <i class="bi bi-envelope"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-5 text-center mt-5 mt-lg-0">
 
-                <div class="bg-dark rounded-circle
-                            d-flex align-items-center justify-content-center mx-auto"
-                     style="width:250px;height:250px;">
+            <!-- PROFILE PHOTO -->
 
-                    <i class="bi bi-person-fill"
-                       style="font-size:120px;color:#35cfff;">
-                    </i>
+            <div class="col-lg-5 text-center">
+
+                <!--
+                    PHOTO INSTRUCTIONS:
+
+                    Create:
+
+                    assets/profile.jpg
+
+                    and put your professional photo there.
+
+                    Example:
+
+                    saurabhshuklass.github.io/
+                    |
+                    |-- index.html
+                    |-- resume.pdf
+                    |
+                    |-- assets/
+                         |-- profile.jpg
+                -->
+
+                <div class="profile-container">
+
+                    <img
+                        src="assets/profile.jpg"
+                        alt="Saurabh Shukla"
+                        class="profile-image"
+                        onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
+
+
+                    <div
+                        id="photoFallback"
+                        class="profile-placeholder"
+                        style="display:none;">
+
+                        <i class="bi bi-person"></i>
+
+                    </div>
 
                 </div>
 
@@ -260,37 +1394,93 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
 
-<section id="about" class="py-5">
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section id="about">
 
     <div class="container">
 
-        <h2 class="text-center section-title">
+        <h2 class="section-title text-center">
+
             About <span>Me</span>
+
         </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            Cybersecurity-focused MCA student with practical
+            experience across Android development, web security
+            and security tools.
+
+        </p>
+
 
         <div class="row justify-content-center">
 
-            <div class="col-lg-9 text-center">
+            <div class="col-lg-10">
 
-                <p class="lead">
-                    I am an MCA student specializing in Cybersecurity with
-                    a strong interest in Android application development.
-                </p>
+                <div class="about-card">
 
-                <p>
-                    I enjoy developing practical applications using Kotlin,
-                    Android Studio and Firebase. Along with Android development,
-                    I am interested in cybersecurity, ethical hacking,
-                    secure application development and web security.
-                </p>
+                    <p>
 
-                <p>
-                    My goal is to build secure, user-friendly and
-                    production-oriented applications while continuously
-                    improving my technical skills.
-                </p>
+                        I am an MCA student specializing in Cybersecurity
+                        with hands-on experience developing security-focused
+                        applications and practicing cybersecurity tools in
+                        lab environments.
+
+                    </p>
+
+
+                    <p>
+
+                        My technical background includes Android development
+                        with Kotlin, Firebase, Retrofit and REST APIs,
+                        along with cybersecurity concepts such as phishing
+                        detection, secure authentication, password security,
+                        URL analysis, vulnerability analysis and threat
+                        analysis.
+
+                    </p>
+
+
+                    <p>
+
+                        My current career direction is expanding beyond
+                        Android development toward cybersecurity and related
+                        roles. I am particularly interested in Linux,
+                        Linux administration fundamentals, vulnerability
+                        analysis, ethical hacking, security operations and
+                        practical network security.
+
+                    </p>
+
+
+                    <p>
+
+                        I am also developing my understanding of web
+                        technologies and SEO, which helps me understand
+                        websites, web applications and online visibility
+                        from both technical and security perspectives.
+
+                    </p>
+
+
+                    <div class="focus-box">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <strong>Current Focus:</strong>
+
+                        Cybersecurity • Linux • Networking •
+                        Vulnerability Analysis • Security Operations
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -301,91 +1491,252 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
 
-<section id="skills" class="py-5 bg-light">
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section id="skills">
 
     <div class="container">
 
-        <h2 class="text-center section-title">
+        <h2 class="section-title text-center">
+
             My <span>Skills</span>
+
         </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            Technologies and security tools that I have worked with,
+            practiced or am currently learning.
+
+        </p>
+
 
         <div class="row g-4">
 
-            <!-- Android -->
 
-            <div class="col-md-6 col-lg-4">
+            <!-- CYBERSECURITY -->
 
-                <div class="card skill-card p-4 text-center">
+            <div class="col-lg-4 col-md-6">
 
-                    <i class="bi bi-phone skill-icon"></i>
-
-                    <h4 class="mt-3">Android Development</h4>
-
-                    <div class="mt-3">
-
-                        <span class="badge-custom">Kotlin</span>
-                        <span class="badge-custom">Android Studio</span>
-                        <span class="badge-custom">Firebase</span>
-                        <span class="badge-custom">Retrofit</span>
-                        <span class="badge-custom">Material Design</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Cybersecurity -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="card skill-card p-4 text-center">
+                <div class="skill-card">
 
                     <i class="bi bi-shield-lock skill-icon"></i>
 
-                    <h4 class="mt-3">Cybersecurity</h4>
+                    <h4>Cybersecurity</h4>
 
-                    <div class="mt-3">
+                    <p>
 
-                        <span class="badge-custom">Kali Linux</span>
-                        <span class="badge-custom">Nmap</span>
-                        <span class="badge-custom">Burp Suite</span>
-                        <span class="badge-custom">Wireshark</span>
-                        <span class="badge-custom">Metasploit</span>
+                        Security fundamentals, web security,
+                        phishing detection, authentication,
+                        password security and vulnerability analysis.
 
-                    </div>
+                    </p>
+
+
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">Nessus</span>
+                    <span class="skill-tag">Wireshark</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LINUX -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-terminal skill-icon"></i>
+
+                    <h4>Linux & Security</h4>
+
+                    <p>
+
+                        Practical Linux usage through cybersecurity
+                        labs with an interest in Linux administration,
+                        networking and system security.
+
+                    </p>
+
+
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Linux Commands</span>
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Nmap</span>
 
                 </div>
 
             </div>
 
 
-            <!-- Web -->
 
-            <div class="col-md-6 col-lg-4">
+            <!-- ANDROID -->
 
-                <div class="card skill-card p-4 text-center">
+            <div class="col-lg-4 col-md-6">
 
-                    <i class="bi bi-code-slash skill-icon"></i>
+                <div class="skill-card">
 
-                    <h4 class="mt-3">Web Development</h4>
+                    <i class="bi bi-phone skill-icon"></i>
 
-                    <div class="mt-3">
+                    <h4>Android Development</h4>
 
-                        <span class="badge-custom">HTML</span>
-                        <span class="badge-custom">CSS</span>
-                        <span class="badge-custom">Bootstrap</span>
-                        <span class="badge-custom">JavaScript</span>
-                        <span class="badge-custom">ASP.NET Core</span>
+                    <p>
 
-                    </div>
+                        Experience building Android applications
+                        using Kotlin, Firebase and modern Android
+                        UI components.
+
+                    </p>
+
+
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">XML</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Firestore</span>
+                    <span class="skill-tag">Retrofit</span>
+                    <span class="skill-tag">Material Design 3</span>
+                    <span class="skill-tag">REST API</span>
 
                 </div>
 
             </div>
+
+
+
+            <!-- WEB -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-globe skill-icon"></i>
+
+                    <h4>Web & Programming</h4>
+
+                    <p>
+
+                        Basic web and programming knowledge used
+                        in application development and cybersecurity
+                        projects.
+
+                    </p>
+
+
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">ASP.NET</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DIGITAL FORENSICS -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-search skill-icon"></i>
+
+                    <h4>Digital Forensics</h4>
+
+                    <p>
+
+                        Familiarity with forensic and investigation
+                        tools through academic learning and practical
+                        cybersecurity exercises.
+
+                    </p>
+
+
+                    <span class="skill-tag">FTK Imager</span>
+                    <span class="skill-tag">Autopsy</span>
+                    <span class="skill-tag">OpenStego</span>
+                    <span class="skill-tag">ExifTool</span>
+                    <span class="skill-tag">HashCalc</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOOLS -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-tools skill-icon"></i>
+
+                    <h4>Tools & Platforms</h4>
+
+                    <p>
+
+                        Development and security tools used for
+                        projects, learning and laboratory practice.
+
+                    </p>
+
+
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">VirtualBox</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEO -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-graph-up-arrow skill-icon"></i>
+
+                    <h4>SEO & Web Basics</h4>
+
+                    <p>
+
+                        Basic understanding of website structure,
+                        on-page SEO, technical SEO concepts and
+                        website analysis.
+
+                    </p>
+
+
+                    <span class="skill-tag">On-Page SEO</span>
+                    <span class="skill-tag">Technical SEO</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">Meta Tags</span>
+                    <span class="skill-tag">Website Analysis</span>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -394,52 +1745,81 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
 
-<section id="projects" class="py-5">
+<!-- =====================================================
+     PROJECTS
+====================================================== -->
+
+<section id="projects">
 
     <div class="container">
 
-        <h2 class="text-center section-title">
-            My <span>Projects</span>
+        <h2 class="section-title text-center">
+
+            Featured <span>Projects</span>
+
         </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            Practical projects demonstrating my experience in
+            cybersecurity, Android development and secure systems.
+
+        </p>
+
 
         <div class="row g-4">
 
 
-            <!-- CyberPath -->
+            <!-- CYBERPATH -->
 
-            <div class="col-md-6">
+            <div class="col-lg-6">
 
-                <div class="card project-card shadow-sm p-3">
+                <div class="project-card">
 
-                    <div class="card-body">
+                    <div class="project-header">
 
-                        <i class="bi bi-shield-check skill-icon"></i>
+                        <i class="bi bi-shield-check"></i>
 
-                        <h4 class="card-title mt-3">
-                            CyberPath
-                        </h4>
+                    </div>
+
+
+                    <div class="project-body">
+
+                        <h4>CyberPath</h4>
 
                         <p>
-                            Cybersecurity awareness and practical training
-                            Android application designed to help users learn
-                            cybersecurity concepts through lessons,
-                            practical exercises and quizzes.
+
+                            Cybersecurity Awareness & Training Android
+                            application with practical learning,
+                            quizzes, URL safety analysis and
+                            cybersecurity news.
+
                         </p>
 
-                        <div>
 
-                            <span class="badge bg-primary">Kotlin</span>
-                            <span class="badge bg-primary">Firebase</span>
-                            <span class="badge bg-primary">Retrofit</span>
-                            <span class="badge bg-primary">Android</span>
+                        <div class="project-tech">
+
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Firestore</span>
+                            <span class="skill-tag">Retrofit</span>
+                            <span class="skill-tag">Safe Browsing API</span>
 
                         </div>
 
-                        <a href="#"
-                           class="btn btn-outline-primary mt-3">
-                            View Project
+
+                        <a
+                            href="https://github.com/saurabhshuklass/CyberPath"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-btn">
+
+                            <i class="bi bi-github"></i>
+
+                            View on GitHub
+
                         </a>
 
                     </div>
@@ -449,43 +1829,313 @@
             </div>
 
 
-            <!-- E-Vidya -->
 
-            <div class="col-md-6">
+            <!-- E-VIDYA -->
 
-                <div class="card project-card shadow-sm p-3">
+            <div class="col-lg-6">
 
-                    <div class="card-body">
+                <div class="project-card">
 
-                        <i class="bi bi-book skill-icon"></i>
+                    <div class="project-header">
 
-                        <h4 class="card-title mt-3">
-                            E-Vidya
-                        </h4>
+                        <i class="bi bi-book"></i>
+
+                    </div>
+
+
+                    <div class="project-body">
+
+                        <h4>E-Vidya</h4>
 
                         <p>
-                            Android-based educational application that
-                            provides users with learning resources and
-                            authentication using Firebase.
+
+                            Android e-learning and quiz application
+                            featuring Firebase authentication,
+                            Firestore data storage, random questions
+                            and learning progress tracking.
+
                         </p>
 
-                        <div>
 
-                            <span class="badge bg-primary">Kotlin</span>
-                            <span class="badge bg-primary">Firebase</span>
-                            <span class="badge bg-primary">Firestore</span>
-                            <span class="badge bg-primary">Android</span>
+                        <div class="project-tech">
+
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Firestore</span>
 
                         </div>
 
-                        <a href="#"
-                           class="btn btn-outline-primary mt-3">
-                            View Project
+
+                        <a
+                            href="https://github.com/saurabhshuklass/E-Vidya"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-btn">
+
+                            <i class="bi bi-github"></i>
+
+                            View on GitHub
+
                         </a>
 
                     </div>
 
                 </div>
+
+            </div>
+
+
+
+            <!-- PHISHING DETECTOR -->
+
+            <div class="col-lg-6">
+
+                <div class="project-card">
+
+                    <div class="project-header">
+
+                        <i class="bi bi-fingerprint"></i>
+
+                    </div>
+
+
+                    <div class="project-body">
+
+                        <h4>Phishing Detection System</h4>
+
+                        <p>
+
+                            Python Flask-based system that analyzes
+                            URLs using rule-based detection and
+                            VirusTotal threat intelligence to identify
+                            suspicious websites.
+
+                        </p>
+
+
+                        <div class="project-tech">
+
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">VirusTotal API</span>
+                            <span class="skill-tag">Cybersecurity</span>
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/saurabhshuklass/phishing-detector"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-btn">
+
+                            <i class="bi bi-github"></i>
+
+                            View on GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SECURE LOGIN -->
+
+            <div class="col-lg-6">
+
+                <div class="project-card">
+
+                    <div class="project-header">
+
+                        <i class="bi bi-lock"></i>
+
+                    </div>
+
+
+                    <div class="project-body">
+
+                        <h4>Secure Login System</h4>
+
+                        <p>
+
+                            Secure authentication system developed
+                            with Python and Flask using bcrypt password
+                            hashing, session management and
+                            brute-force protection.
+
+                        </p>
+
+
+                        <div class="project-tech">
+
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">bcrypt</span>
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/saurabhshuklass/secure-login-system"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-btn">
+
+                            <i class="bi bi-github"></i>
+
+                            View on GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ALL PROJECTS BUTTON -->
+
+        <div class="text-center mt-5">
+
+            <a
+                href="https://github.com/saurabhshuklass?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary-custom">
+
+                <i class="bi bi-github"></i>
+
+                View All GitHub Repositories
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAREER FOCUS
+====================================================== -->
+
+<section id="career">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+
+            Career <span>Focus</span>
+
+        </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            Areas I am currently interested in developing professionally.
+
+        </p>
+
+
+        <div class="career-card">
+
+            <div class="career-item">
+
+                <h5>
+                    <i class="bi bi-shield-lock"></i>
+                    Cybersecurity
+                </h5>
+
+                <p>
+
+                    Interested in cybersecurity roles involving
+                    security analysis, vulnerability assessment,
+                    web security and security operations.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-item">
+
+                <h5>
+                    <i class="bi bi-terminal"></i>
+                    Linux & System Administration
+                </h5>
+
+                <p>
+
+                    Building stronger Linux, networking and system
+                    administration skills with a focus on secure
+                    environments.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-item">
+
+                <h5>
+                    <i class="bi bi-bug"></i>
+                    Ethical Hacking & Vulnerability Analysis
+                </h5>
+
+                <p>
+
+                    Developing practical knowledge of reconnaissance,
+                    web security testing, vulnerability analysis and
+                    security tools.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-item">
+
+                <h5>
+                    <i class="bi bi-phone"></i>
+                    Android Development
+                </h5>
+
+                <p>
+
+                    Continuing to maintain Android development as
+                    a technical skill through Kotlin, Firebase,
+                    APIs and existing projects.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-item">
+
+                <h5>
+                    <i class="bi bi-graph-up"></i>
+                    SEO & Web
+                </h5>
+
+                <p>
+
+                    Developing practical understanding of website
+                    structure, SEO and web technologies.
+
+                </p>
 
             </div>
 
@@ -496,58 +2146,343 @@
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
 
-<section id="education" class="py-5 bg-light">
+<!-- =====================================================
+     EDUCATION
+====================================================== -->
+
+<section id="education">
 
     <div class="container">
 
-        <h2 class="text-center section-title">
+        <h2 class="section-title text-center">
+
             <span>Education</span>
+
         </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            My academic background.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <!-- MCA -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h4>Master of Computer Applications</h4>
+
+                    <p>
+
+                        <strong>Cybersecurity</strong>
+
+                    </p>
+
+                    <p>
+
+                        Ganpat University
+
+                    </p>
+
+                    <p>
+
+                        September 2025 – 2027 · Pursuing
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BCA -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h4>Bachelor of Computer Applications</h4>
+
+                    <p>
+
+                        Bhagwan Mahavir University
+
+                    </p>
+
+                    <p>
+
+                        January 2022 – 2025
+
+                    </p>
+
+                    <p>
+
+                        CGPA: 7.27
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 12 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h4>12th Science (PCM)</h4>
+
+                    <p>
+
+                        Allahabad Public School
+
+                    </p>
+
+                    <p>
+
+                        Percentage: 60.40%
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 10 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h4>10th</h4>
+
+                    <p>
+
+                        SNMP Inter College
+
+                    </p>
+
+                    <p>
+
+                        Percentage: 73.16%
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+====================================================== -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+
+            <span>Certifications & Activities</span>
+
+        </h2>
+
+
+        <p class="section-subtitle text-center">
+
+            Academic activities, workshops and professional learning.
+
+        </p>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-award"></i>
+
+                    <h5>
+
+                        Sci-Faire Art Exhibition
+
+                    </h5>
+
+                    <p>
+
+                        Certificate of Appreciation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-cpu"></i>
+
+                    <h5>
+
+                        IT & AI Industry Workshop
+
+                    </h5>
+
+                    <p>
+
+                        Industrial Visit & Workshop:
+                        “Unlocking the Future: IT & AI Industry”.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <h5>
+
+                        Research Conclave 2025
+
+                    </h5>
+
+                    <p>
+
+                        Participation related to
+                        “Zero Trust Security Model”.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-mortarboard"></i>
+
+                    <h5>
+
+                        COMS² 2025
+
+                    </h5>
+
+                    <p>
+
+                        International Conference Participation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+====================================================== -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+
+            <span>Experience</span>
+
+        </h2>
+
 
         <div class="row justify-content-center">
 
             <div class="col-lg-8">
 
-                <div class="card shadow-sm border-0 mb-3">
+                <div class="experience-card">
 
-                    <div class="card-body">
+                    <i class="bi bi-person-workspace experience-icon"></i>
 
-                        <h4>
-                            Master of Computer Applications (MCA)
-                        </h4>
+                    <h3>Fresher</h3>
 
-                        <p class="mb-1">
-                            Specialization: Cybersecurity
-                        </p>
+                    <p>
 
-                        <small class="text-muted">
-                            Currently Pursuing
-                        </small>
+                        I am currently seeking my first professional
+                        opportunity where I can apply my cybersecurity,
+                        Linux, development and problem-solving skills
+                        while continuing to learn from experienced
+                        professionals.
 
-                    </div>
-
-                </div>
+                    </p>
 
 
-                <div class="card shadow-sm border-0">
+                    <p>
 
-                    <div class="card-body">
+                        I am particularly interested in entry-level
+                        opportunities related to cybersecurity,
+                        security operations, vulnerability analysis,
+                        Linux administration and related IT roles.
 
-                        <h4>
-                            Bachelor of Computer Applications (BCA)
-                        </h4>
+                    </p>
 
-                        <p class="mb-1">
-                            Computer Applications
-                        </p>
 
-                        <small class="text-muted">
-                            Completed
-                        </small>
+                    <a
+                        href="#contact"
+                        class="btn btn-primary-custom mt-3">
 
-                    </div>
+                        Let's Connect
+
+                    </a>
 
                 </div>
 
@@ -560,56 +2495,322 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
 
-<section id="contact" class="py-5 contact-section">
+<!-- =====================================================
+     RESUME
+====================================================== -->
+
+<section id="resume">
 
     <div class="container">
 
-        <h2 class="text-center section-title">
+        <div class="resume-box">
+
+            <i class="bi bi-file-earmark-person"></i>
+
+            <h2 class="mt-3">
+
+                My Resume
+
+            </h2>
+
+
+            <p>
+
+                Interested in my academic background, projects,
+                technical skills and cybersecurity experience?
+
+                Download my resume for complete details.
+
+            </p>
+
+
+            <!--
+                IMPORTANT:
+
+                Put your resume PDF in the SAME folder as index.html.
+
+                File structure:
+
+                index.html
+                resume.pdf
+
+                Then this button will work.
+            -->
+
+
+            <a
+                href="resume.pdf"
+                download
+                class="btn btn-primary-custom">
+
+                <i class="bi bi-download"></i>
+
+                Download Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+
             Contact <span>Me</span>
+
         </h2>
 
-        <div class="row justify-content-center">
 
-            <div class="col-lg-7 text-center">
+        <p class="section-subtitle text-center">
 
-                <p>
-                    Interested in working together or discussing an opportunity?
-                    Feel free to contact me.
-                </p>
+            Feel free to contact me for opportunities,
+            collaboration or professional discussions.
 
-                <div class="mt-4">
+        </p>
 
-                    <p>
-                        <i class="bi bi-envelope me-2"></i>
-                        your-email@example.com
-                    </p>
 
-                    <p>
-                        <i class="bi bi-geo-alt me-2"></i>
-                        India
-                    </p>
+        <div class="row g-4">
 
-                </div>
 
-                <div class="mt-4">
+            <!-- CONTACT DETAILS -->
 
-                    <a href="https://github.com/"
-                       target="_blank"
-                       class="social-icon">
-                        <i class="bi bi-github"></i>
-                    </a>
+            <div class="col-lg-5">
 
-                    <a href="https://linkedin.com/"
-                       target="_blank"
-                       class="social-icon">
+                <div class="contact-card">
+
+                    <h4 class="mb-4">
+
+                        Get In Touch
+
+                    </h4>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <div>
+
+                            <small>Email</small>
+
+                            <a href="mailto:work.saurabhshuklass@gmail.com">
+
+                                work.saurabhshuklass@gmail.com
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone"></i>
+
+                        <div>
+
+                            <small>Phone</small>
+
+                            <a href="tel:+919616654317">
+
+                                +91 9616654317
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        <div>
+
+                            <small>Location</small>
+
+                            <span>
+
+                                Surat, Gujarat, India
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LINKEDIN -->
+
+                    <div class="contact-item">
+
                         <i class="bi bi-linkedin"></i>
-                    </a>
+
+                        <div>
+
+                            <small>LinkedIn</small>
+
+                            <a
+                                href="https://www.linkedin.com/in/saurabh-shukla-931683388/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                LinkedIn Profile
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GITHUB -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-github"></i>
+
+                        <div>
+
+                            <small>GitHub</small>
+
+                            <a
+                                href="https://github.com/saurabhshuklass"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                github.com/saurabhshuklass
+
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="col-lg-7">
+
+                <div class="contact-card">
+
+                    <h4 class="mb-4">
+
+                        Send Me a Message
+
+                    </h4>
+
+
+                    <!--
+                        This form is FRONTEND ONLY.
+
+                        It does not store messages in a database.
+
+                        The JavaScript below opens the user's
+                        email application with the entered details.
+                    -->
+
+
+                    <form id="contactForm">
+
+                        <div class="row g-3">
+
+
+                            <div class="col-md-6">
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="form-control"
+                                    placeholder="Your Name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Your Email"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    class="form-control"
+                                    placeholder="Subject"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <textarea
+                                    id="message"
+                                    rows="6"
+                                    class="form-control"
+                                    placeholder="Your Message"
+                                    required></textarea>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary-custom">
+
+                                    <i class="bi bi-send"></i>
+
+                                    Send Message
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -618,14 +2819,65 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
 
-<footer class="py-3 text-center">
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
-    <div class="container">
+<footer>
 
-        <p class="mb-0">
-            © 2026 Saurabh Shukla. All Rights Reserved.
+    <div class="container text-center">
+
+
+        <div class="mb-3">
+
+            <a
+                href="https://github.com/saurabhshuklass"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link">
+
+                <i class="bi bi-github"></i>
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/saurabh-shukla-931683388/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link">
+
+                <i class="bi bi-linkedin"></i>
+
+            </a>
+
+
+            <a
+                href="mailto:work.saurabhshuklass@gmail.com"
+                class="social-link">
+
+                <i class="bi bi-envelope"></i>
+
+            </a>
+
+
+            <a
+                href="tel:+919616654317"
+                class="social-link">
+
+                <i class="bi bi-telephone"></i>
+
+            </a>
+
+        </div>
+
+
+        <p class="footer-text mb-0">
+
+            © 2026 Saurabh Shukla.
+            Built with HTML, CSS & Bootstrap.
+
         </p>
 
     </div>
@@ -633,8 +2885,67 @@
 </footer>
 
 
-<!-- Bootstrap 5.3.8 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- =====================================================
+     BOOTSTRAP JAVASCRIPT
+====================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     CONTACT FORM JAVASCRIPT
+====================================================== -->
+
+<script>
+
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const subject =
+                document.getElementById("subject").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            const body =
+
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" +
+                message;
+
+
+            const mailtoLink =
+
+                "mailto:work.saurabhshuklass@gmail.com" +
+                "?subject=" +
+                encodeURIComponent(subject) +
+                "&body=" +
+                encodeURIComponent(body);
+
+
+            window.location.href = mailtoLink;
+
+        });
+
+</script>
+
 
 </body>
+
 </html>
